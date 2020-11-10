@@ -1,0 +1,24 @@
+.avatar_root {display: flex;
+    margin-top: 64px;
+    align-items: center;
+    flex-direction: column;}
+.paper_new {display: flex;
+align-items: center;
+flex-direction: column;
+margin-top: 64px}
+
+.muiAvatar-color {
+    margin: 8px;
+    background-color: #dc004e !important;
+}
+.muiPaper-elevation {
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.0), 0 1px 1px 0 rgba(0,0,0,0.0), 0 1px 3px 0 rgba(0,0,0,0.0) !important;
+    background-color: transparent !important;
+}
+.button-margin {
+    margin: 24px 0 16px !important;
+}
+.margin-top {
+    width: 100%;
+    margin-top: 24px;
+}
