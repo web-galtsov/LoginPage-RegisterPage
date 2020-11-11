@@ -2,29 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { userActions } from '../_actions';
 import AppBar from "@material-ui/core/AppBar";
-/*import Badge from "@material-ui/core/Badge";*/
 import IconButton from "@material-ui/core/IconButton";
-/*import NotificationsIcon from '@material-ui/icons/Notifications';*/
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import { Delete} from "@material-ui/icons";
-/*import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-import MailIcon from "@material-ui/icons/Mail";*/
+
 import ToolbarComponent from "../Toolbar/Toolbar";
 import DrawerComponent from "../Drawer/Drawer";
-/*
-const inlineStyles = {
-    spacer: {
-        flex: 1
-    },
-    badgeFix: {
-        display: 'inline-flex'
-    }
-};*/
-
 
 class HomePage extends React.Component {
     componentDidMount() {
@@ -38,12 +24,6 @@ class HomePage extends React.Component {
         achorEl: false,
         MobileMoreAnchorEl: false
     };
-/*
-    handleProfileMenuOpen = event => {
-        this.setState({
-            achorEl: event.currentTarget
-        });
-    };*/
 
     handleMobileMenuClose = () => {
         this.setState({
@@ -70,11 +50,9 @@ class HomePage extends React.Component {
             <>
             <AppBar>
                  <ToolbarComponent openDrawerHandler={this.openDrawer} />
-                    <DrawerComponent
-                            left={this.state.left}
-                            toggleDrawerHandler={this.toggleDrawer}
-                        />
+                 <DrawerComponent   left={this.state.left}  toggleDrawerHandler={this.toggleDrawer}  />
             </AppBar>
+
 
                 <div>
                     <p>You're logged in with React!!</p>

@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Alert from "@material-ui/lab/Alert";
+import  FAQ  from "../pages/FAQ/index";
 
 
 
@@ -47,6 +48,7 @@ class App extends React.Component {
                                 <Route path="/login" component={LoginPage} />
                                 <Route path="/register" component={RegisterPage} />
                                 <Route path="/password" component={ForgetPassword} />
+                                <Route path="/faq" component={FAQ} />
                                {/* <Redirect from="*" to="/" />*/}
                             </Switch>
                         </Router>
