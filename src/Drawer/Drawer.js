@@ -41,18 +41,18 @@ class DrawerComponent extends React.Component {
                         </ListItem>
                     ))}
                 </List>*/}
-                  <List>
-                     <NavLink activeOnlyWhenExact to="/" icon={InboxIcon}>
+                <List>
+                    <NavLink activeOnlyWhenExact to="/" icon={InboxIcon}>
                         Home
                     </NavLink>
-                         <NavLink to="/faq" icon={MailIcon}>
-                                 FAQ
-                          </NavLink>
-                     </List>
-                        <main className={classes.content}>
-                          <div className={classes.toolbar} />
-                            {children}
-                       </main>
+                    <NavLink to="/faq" icon={MailIcon}>
+                        FAQ
+                    </NavLink>
+                </List>
+                <main className={classes.content}>
+                    <div className={classes.toolbar} />
+                    {children}
+                </main>
 
                 <Divider />
                 <List>
@@ -71,9 +71,9 @@ class DrawerComponent extends React.Component {
         return (
             <Router history={history}>
                 <Switch>
-                  <Drawer open={this.props.left} onClose={this.props.toggleDrawerHandler}>
-                  {sideList("left")}
-            </Drawer>
+                    <Drawer open={this.props.left} onClose={this.props.toggleDrawerHandler}>
+                        {sideList("left")}
+                    </Drawer>
                 </Switch>
             </Router>
 

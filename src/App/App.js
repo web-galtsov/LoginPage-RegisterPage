@@ -25,7 +25,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        const { dispatch } = this.props; //svaka konektovana komponenta prima this.props.dispatch 
+        const { dispatch } = this.props; //svaka konektovana komponenta prima this.props.dispatch
         history.listen((location, action) => {
             // clear alert on location change
             dispatch(alertActions.clear());
@@ -39,19 +39,19 @@ class App extends React.Component {
             <div className="jumbotron">
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
-                        {alert.message &&
-                        <Alert severity="success">{alert.message}</Alert>
-                        }
-                        <Router history={history}>
-                            <Switch>
-                                <PrivateRoute exact path="/" component={HomePage} />
-                                <Route path="/login" component={LoginPage} />
-                                <Route path="/register" component={RegisterPage} />
-                                <Route path="/password" component={ForgetPassword} />
-                                <Route path="/faq" component={FAQ} />
-                               {/* <Redirect from="*" to="/" />*/}
-                            </Switch>
-                        </Router>
+                    {alert.message &&
+                    <Alert severity="success">{alert.message}</Alert>
+                    }
+                    <Router history={history}>
+                        <Switch>
+                            <PrivateRoute exact path="/" component={HomePage} />
+                            <Route path="/login" component={LoginPage} />
+                            <Route path="/register" component={RegisterPage} />
+                            <Route path="/password" component={ForgetPassword} />
+                            <Route path="/faq" component={FAQ} />
+                            {/* <Redirect from="*" to="/" />*/}
+                        </Switch>
+                    </Router>
 
 
                 </Container>
@@ -65,7 +65,7 @@ function mapStateToProps(state) {
     return { alert };
 }
 
- // new add
+// new add
 /*const actionCreators = {
     clearAlerts: alertActions.clear
 };*/
