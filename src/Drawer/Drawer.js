@@ -7,23 +7,17 @@ import MailIcon from "@material-ui/icons/Mail";
 import NavLink from "../layouts/MainLayout/NavLink";
 import {history} from "../_helpers";
 import {Router, Switch} from "react-router-dom";
-
 const styles = theme => ({
-    list: {
-        width: 250
-    },
-    fullList: {
-        width: "auto"
-    }
+    list: {  width: 250 },
+    fullList: { width: "auto" }
 });
 
 class DrawerComponent extends React.Component {
-    state = {
-        left: false
-    };
+    state = { left: false };
 
     render() {
         const { classes, children } = this.props;
+
         const sideList = side => (
             <div
                 className={classes.list}
@@ -31,28 +25,18 @@ class DrawerComponent extends React.Component {
                 onClick={this.props.toggleDrawerHandler}
                 onKeyDown={this.props.toggleDrawerHandler}
             >
-                {/*<List>
-                    {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>*/}
-                <List>
-                    <NavLink activeOnlyWhenExact to="/" icon={InboxIcon}>
+                  <List>
+                     <NavLink activeOnlyWhenExact to="/" icon={InboxIcon}>
                         Home
                     </NavLink>
-                    <NavLink to="/faq" icon={MailIcon}>
-                        FAQ
-                    </NavLink>
-                </List>
-                <main className={classes.content}>
-                    <div className={classes.toolbar} />
-                    {children}
-                </main>
+                         <NavLink to="/faq" icon={MailIcon}>
+                                 FAQ
+                          </NavLink>
+                     </List>
+                        <main className={classes.content}>
+                          <div className={classes.toolbar} />
+                            {children}
+                       </main>
 
                 <Divider />
                 <List>
@@ -67,18 +51,16 @@ class DrawerComponent extends React.Component {
                 </List>
             </div>
         );
-
         return (
             <Router history={history}>
                 <Switch>
-                    <Drawer open={this.props.left} onClose={this.props.toggleDrawerHandler}>
-                        {sideList("left")}
-                    </Drawer>
+                 <Drawer open={this.props.left} onClose={this.props.toggleDrawerHandler}>
+                  {sideList("left")}
+                </Drawer>
                 </Switch>
             </Router>
 
         );
     }
 }
-
 export default withStyles(styles)(DrawerComponent);

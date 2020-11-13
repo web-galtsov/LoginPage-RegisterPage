@@ -22,8 +22,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.12.1",
+    "clsx": "^1.1.1",
     "prop-types": "^15.7.2",
-    "react-toastify": "^6.0.9"
+    "react-toastify": "^6.0.9",
+    "recompose": "^0.30.0"
   },
   "scripts": {
     "start": "react-scripts start",
